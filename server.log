@@ -1,0 +1,105 @@
+2022-12-02T02:28:12.460Z - info: [gme] Node version v16.16.0
+2022-12-02T02:28:12.464Z - info: [gme] Logfile [ info ] : C:\Users\rodri\Work\miniproject-petrinet\server.log
+2022-12-02T02:28:12.466Z - info: [gme] Logfile [ error ] : C:\Users\rodri\Work\miniproject-petrinet\server-error.log
+2022-12-02T02:28:12.532Z - info: [gme:server:standalone] Valid addresses of gme web server:  http://192.168.56.1:8888  http://192.168.0.60:8888  http://127.0.0.1:8888
+2022-12-02T02:28:12.863Z - info: [gme:server:standalone:middleware:BlobServer:BlobBackend] local-storage: C:\Users\rodri\Work\miniproject-petrinet\blob-local-storage
+2022-12-02T02:28:12.877Z - info: [gme:server:auth:gmeauth] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-02T02:28:12.943Z - warn: [gme:server:auth:gmeauth] User "guest" was not found. We will attempt to create it automatically.
+2022-12-02T02:28:13.267Z - info: [gme:server:standalone:mongo] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-02T02:28:14.997Z - info: [gme:server:standalone] Server is listening ...
+2022-12-05T21:53:07.075Z - info: [gme] Node version v16.16.0
+2022-12-05T21:53:07.078Z - info: [gme] Logfile [ info ] : C:\Users\rodri\Work\miniproject-petrinet\server.log
+2022-12-05T21:53:07.078Z - info: [gme] Logfile [ error ] : C:\Users\rodri\Work\miniproject-petrinet\server-error.log
+2022-12-05T21:53:07.146Z - info: [gme:server:standalone] Valid addresses of gme web server:  http://192.168.56.1:8888  http://192.168.0.60:8888  http://127.0.0.1:8888
+2022-12-05T21:53:07.498Z - info: [gme:server:standalone:middleware:BlobServer:BlobBackend] local-storage: C:\Users\rodri\Work\miniproject-petrinet\blob-local-storage
+2022-12-05T21:53:07.510Z - info: [gme:server:auth:gmeauth] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T21:53:07.565Z - info: [gme:server:standalone:mongo] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T21:53:08.227Z - info: [gme:server:standalone] Server is listening ...
+2022-12-05T22:29:17.914Z - info: [gme] Node version v16.16.0
+2022-12-05T22:29:17.915Z - info: [gme] Logfile [ info ] : C:\Users\rodri\Work\miniproject-petrinet\server.log
+2022-12-05T22:29:17.916Z - info: [gme] Logfile [ error ] : C:\Users\rodri\Work\miniproject-petrinet\server-error.log
+2022-12-05T22:29:17.945Z - info: [gme:server:standalone] Valid addresses of gme web server:  http://192.168.56.1:8888  http://192.168.0.60:8888  http://127.0.0.1:8888
+2022-12-05T22:29:18.083Z - info: [gme:server:standalone:middleware:BlobServer:BlobBackend] local-storage: C:\Users\rodri\Work\miniproject-petrinet\blob-local-storage
+2022-12-05T22:29:18.088Z - info: [gme:server:auth:gmeauth] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T22:29:18.115Z - info: [gme:server:standalone:mongo] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T22:29:18.578Z - info: [gme:server:standalone] Server is listening ...
+2022-12-05T22:29:29.671Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase] Meta-nodes share the same full name. Will still proceed.. Petri_Net
+2022-12-05T22:29:29.736Z - info: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] zmq-server listening at port 5555
+2022-12-05T22:29:29.869Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Traceback (most recent call last):
+  File "C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py", line 12, in <module>
+
+2022-12-05T22:29:29.873Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin]     from webgme_bindings import WebGME
+ModuleNotFoundError: No module named 'webgme_bindings'
+
+2022-12-05T22:29:29.882Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:29:29.887Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions] plugin [ClassificationPlugin] failed with error message=python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1., stack=Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:29:57.280Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase] Meta-nodes share the same full name. Will still proceed.. Petri_Net
+2022-12-05T22:29:57.292Z - info: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] zmq-server listening at port 5555
+2022-12-05T22:29:57.409Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Traceback (most recent call last):
+  File "C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py", line 12, in <module>
+
+2022-12-05T22:29:57.411Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin]     from webgme_bindings import WebGME
+ModuleNotFoundError: No module named 'webgme_bindings'
+
+2022-12-05T22:29:57.423Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:29:57.425Z - error: [gme:server:worker:simpleworker:pid_12736:WorkerFunctions] plugin [ClassificationPlugin] failed with error message=python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1., stack=Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:31:02.720Z - info: [gme] Node version v16.16.0
+2022-12-05T22:31:02.721Z - info: [gme] Logfile [ info ] : C:\Users\rodri\Work\miniproject-petrinet\server.log
+2022-12-05T22:31:02.721Z - info: [gme] Logfile [ error ] : C:\Users\rodri\Work\miniproject-petrinet\server-error.log
+2022-12-05T22:31:02.749Z - info: [gme:server:standalone] Valid addresses of gme web server:  http://192.168.56.1:8888  http://192.168.0.60:8888  http://127.0.0.1:8888
+2022-12-05T22:31:02.874Z - info: [gme:server:standalone:middleware:BlobServer:BlobBackend] local-storage: C:\Users\rodri\Work\miniproject-petrinet\blob-local-storage
+2022-12-05T22:31:02.878Z - info: [gme:server:auth:gmeauth] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T22:31:02.906Z - info: [gme:server:standalone:mongo] connecting to: mongodb://127.0.0.1:27017/miniproject_petrinet
+2022-12-05T22:31:03.353Z - info: [gme:server:standalone] Server is listening ...
+2022-12-05T22:31:14.204Z - error: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions:PluginManagerBase] Meta-nodes share the same full name. Will still proceed.. Petri_Net
+2022-12-05T22:31:14.264Z - info: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] zmq-server listening at port 5555
+2022-12-05T22:31:14.370Z - error: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Traceback (most recent call last):
+  File "C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py", line 12, in <module>
+
+2022-12-05T22:31:14.373Z - error: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin]     from webgme_bindings import WebGME
+ModuleNotFoundError: No module named 'webgme_bindings'
+
+2022-12-05T22:31:14.377Z - error: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:31:14.384Z - error: [gme:server:worker:simpleworker:pid_50688:WorkerFunctions] plugin [ClassificationPlugin] failed with error message=python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1., stack=Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:32:42.325Z - error: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions:PluginManagerBase] Meta-nodes share the same full name. Will still proceed.. Petri_Net
+2022-12-05T22:32:42.397Z - info: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] zmq-server listening at port 5555
+2022-12-05T22:32:42.565Z - error: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Traceback (most recent call last):
+  File "C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py", line 12, in <module>
+
+2022-12-05T22:32:42.566Z - error: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin]     from webgme_bindings import WebGME
+ModuleNotFoundError: No module named 'webgme_bindings'
+
+2022-12-05T22:32:42.575Z - error: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions:PluginManagerBase:plugin:ClassificationPlugin] Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)
+2022-12-05T22:32:42.582Z - error: [gme:server:worker:simpleworker:pid_48412:WorkerFunctions] plugin [ClassificationPlugin] failed with error message=python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1., stack=Error: python C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\run_plugin.py 5555 "#0e64b9478a114ae6b01b40a43690c2aeb4df355b" "master" "" "" "" exited with code 1.
+    at ChildProcess.<anonymous> (C:\Users\rodri\Work\miniproject-petrinet\src\plugins\ClassificationPlugin\ClassificationPlugin.js:99:37)
+    at ChildProcess.emit (node:events:527:28)
+    at maybeClose (node:internal/child_process:1092:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)

@@ -1,0 +1,17 @@
+{
+  "components": {
+    "plugins": {
+      "petriNetPlugin": {
+        "src": "src/plugins/petriNetPlugin",
+        "test": "test/plugins/petriNetPlugin"
+      },
+      "ClassificationPlugin": {
+        "src": "src/plugins/ClassificationPlugin",
+        "test": "test/plugins/ClassificationPlugin"
+      }
+    }
+  },
+  "dependencies": {
+    "plugins": {}
+  }
+}
