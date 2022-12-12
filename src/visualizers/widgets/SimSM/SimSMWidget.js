@@ -108,7 +108,7 @@ define(['jointjs', 'css!./styles/SimSMWidget.css'], function (joint) {
                 size: { width: 70, height: 70 },
                 attrs: {
                     label : {
-                        y: 'calc(0.3*w)',
+                        y: 'calc(0.35*w)',
                         text: "\n\n\n\n" + pn.places[placeId]["name"],
                         fontWeight: 'bold',
                     },
@@ -148,6 +148,7 @@ define(['jointjs', 'css!./styles/SimSMWidget.css'], function (joint) {
             vertex.addTo(self._jointSM);
             pn.transitions[transId].joint = vertex;
             pn.id2state[vertex.id] = transId;
+
         });
 
         // then create the place to transition links
@@ -198,6 +199,7 @@ define(['jointjs', 'css!./styles/SimSMWidget.css'], function (joint) {
         //now refresh the visualization
         self._jointPaper.updateViews();
         self._decorateMachine();
+        pn.markings = [];
     };
 /////////////////////////////////////////////
     SimSMWidget.prototype.destroyMachine = function () {
@@ -237,42 +239,47 @@ define(['jointjs', 'css!./styles/SimSMWidget.css'], function (joint) {
     };
 ///////////////////////////////////
     SimSMWidget.prototype._decorateMachine = function() {
+        
         const pn = this._webgmeSM;
         // update markingsinside 
+        this._jointSM.removeCells(pn.markings);
+        pn.markings = [];
         for (const [placeId, placeData] of Object.entries(pn.places)) {
             var markings = placeData["markings"];
             if (markings > 12) {
                 ///label in center
                 placeData.joint.attr('label/text', markings + "\n\n\n" + pn.places[placeId]["name"]);
             } else {
-                placeData.joint.attr('label/text',"\n\n\n\n" + pn.places[placeId]["name"]);
+                placeData.joint.attr('label/text',"\n\n\n" + pn.places[placeId]["name"]);
+                var position = pn.places[placeId]["position"]
+                var rem = markings % 3;
+                var offsetX = position.x + (rem > 0 && markings < 4 ? (3 - rem) * 10 : 0);
+                var offsetY = position.y + (4 - Math.ceil(markings / 3)) * 10; 
                 for (let i = 0; i < markings; i++) {
-                    //consider if have time 
-        // const current = self._webgmeSM.states[self._webgmeSM.current];
-        // const link = current.jointNext[event];
-        // const linkView = link.findView(self._jointPaper);
-        // linkView.sendToken(joint.V('circle', { r: 10, fill: 'black' }), {duration:500}, function() {
-        //    self._webgmeSM.current = current.next[event];
-        
-        // });
-                    // draw circles 
+                    var marking = new joint.shapes.standard.Circle({
+                        position: {x: offsetX + 15, y: offsetY - 2},
+                        size: { width: 10, height: 10 },
+                        attrs: {
+                            body: {
+                                strokeWidth: 2,
+                                fill: "black",
+                                cursor: 'default'
+                            }
+                        }
+                    });     
+                    this._jointSM.addCell(marking);
+                    pn.markings.push(marking)
+                    offsetX += 15;
 
-                    // rem = numOfMarkings % 3, name = getAttribute("name"),
-                    // offsetX = 30 + (rem > 0 && numOfMarkings < 4 ? (3 - rem) * 10 : 0), 
-                    // offsetY = 20 + (4 - Math.ceil(numOfMarkings / 3)) * 10; 
-
-                    // <circle class="fill-color border-color" cx="<%=offsetX%>" cy="<%=offsetY%>" r="8" stroke="#000" fill="#0"/><%
-                    // offsetX += 20;
-
-                    // if (i % 3 == 0) {
-                    // offsetY += 20;
-                    // offsetX = 30 + (rem > 0 && numOfMarkings - i < 4 ? (3 - rem) * 10 : 0);
-                    // }
-                }
+                    if (i % 3 == 0) {
+                    offsetY += 15;
+                    offsetX = position.x + (rem > 0 && markings - i < 4 ? (3 - rem) * 10 : 0);
+                    }
+                
             }
         }
 
-
+    }
         if (pn.activeTransitions.length > 0) {
             Object.keys(pn.transitions).forEach(trans => {
                 var transJoint = pn.transitions[trans].joint;
@@ -287,12 +294,11 @@ define(['jointjs', 'css!./styles/SimSMWidget.css'], function (joint) {
             });
         } else {
             //deadlocked!!!
+            setTimeout(function() { alert('There are no more active transition!');}, 300);
             Object.keys(pn.transitions).forEach(trans => {
                 var transJoint = pn.transitions[trans].joint;
                 transJoint.attr('body/stroke', 'red');
             });
-            
-            setTimeout(function() { alert('There are no more active transition!');}, 300);
 
         }
         pn.setFireableEvents(pn.activeTransitions);
